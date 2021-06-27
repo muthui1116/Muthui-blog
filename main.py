@@ -135,6 +135,9 @@ def logout():
     logout_user()
     return redirect(url_for('get_all_posts'))
 
+@app.route('/registet_first')
+def register1():
+    return render_template('register1.html')
 
 @app.route("/post/<int:post_id>", methods=["GET", "POST"])
 def show_post(post_id):
